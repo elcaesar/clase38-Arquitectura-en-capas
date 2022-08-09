@@ -1,0 +1,51 @@
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+</style>
+{{#if loginMsg}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Nota:</strong>{{loginMsg}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+{{/if}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card text-bg-light">
+        <div class="card-header">
+          <div class="box">
+            <img src="../images/avatar/{{avatar}}" alt="" width="inherit" height="inherit">
+          </div>
+        </div>
+        <div class="card-body">
+            <h3 class="text-center">Mi Perfil</h3>                 
+            <br>
+            <ul>
+              <li>
+                Email: {{user.userEmail}}
+              </li>
+              <li>
+                Nombre: {{user.nameUser}}
+              </li>
+              <li>
+                Edad: {{user.ageUser}}
+              </li>
+              <li>
+                Dirección: {{user.addressUser}}
+              </li>
+              <li>
+                Telefono: {{user.phoneUser}}
+              </li>
+            </ul>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary btn-block" type="button">Comprar</button>
+        </div>
+    </div>
+</div>
+
